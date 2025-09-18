@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>상수도 사업본부 개편 시안</title>
+    <style>
+        :root{
+            --ink:#0f172a; --muted:#6b7a90; --line:#e7eef6; --chip:#eef4ff;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0; padding:32px 24px; color:var(--ink);
+            font:16px/1.62 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Apple SD Gothic Neo,Malgun Gothic,Arial;
+            background:#fff;
+        }
+        h1{margin:0 0 24px; font-size:28px;}
+        .grid{display:grid; gap:24px; grid-template-columns:1fr; max-width:980px}
+        .card{
+            border:1px solid var(--line); border-radius:16px; padding:20px 20px 16px;
+            box-shadow:0 6px 18px rgba(16,56,116,.06);
+        }
+        .head{display:flex; gap:12px; align-items:center; margin-bottom:10px}
+        .head b{font-size:18px}
+        .pill{
+            display:inline-flex; align-items:center; gap:10px;
+            padding:8px 12px; border-radius:12px; font-weight:700;
+            background:var(--chip);
+        }
+        .link{
+            display:inline-flex; align-items:center; gap:8px;
+            padding:10px 14px; border:1px solid var(--line); border-radius:12px;
+            text-decoration:none; color:#1468ff; font-weight:800; white-space:nowrap;
+        }
+        .desc{margin:8px 0 14px; color:var(--muted)}
+        ul{margin:0; padding-left:18px}
+        li+li{margin-top:4px}
+        .row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+        .swatch{
+            width:14px; height:14px; border-radius:50%; display:inline-block; margin-right:6px;
+            border:1px solid rgba(0,0,0,.06)
+        }
+        .note{margin-top:6px; color:var(--muted); font-size:14px}
+        .meta{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
+        .meta .chip{background:#f6f9ff; border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:13px}
+        footer{max-width:980px; margin-top:24px; color:var(--muted); font-size:14px}
+    </style>
+</head>
+<body>
+
+    <h1>상수도 사업본부 개편 시안</h1>
+
+    <div class="grid">
+
+        <!-- 시안 1 : 포털형(서비스 중심) -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 1 · 포털형(서비스 중심)</span>
+                <a class="link" href="https://sangsudo-ver1.netlify.app/" target="_blank" rel="noopener">시안 1 바로보기 →</a>
+            </div>
+            <p class="desc">
+                시민이 자주 이용하는 기능을 중심으로 설계한 **포털형 메인**입니다.
+                KPI(수질 지표) + 자주찾는 서비스(8개) + 홍보/배너 캐러셀 + 공지 탭을 한 화면에서 확인할 수 있어
+                <b>빠른 길찾기와 정보 접근성</b>을 우선시합니다.
+            </p>
+            <div class="row">
+                <div><span class="swatch" style="background:#0e3383"></span>#1468FF (Main)</div>
+                <div><span class="swatch" style="background:#1D4ED8"></span>#51B9FF (Sub)</div>
+                <div><span class="swatch" style="background:#D9E5FF"></span>#A9E6FF (Button)</div>
+                <div><span class="swatch" style="background:#0f172a"></span>#0F172A (Text)</div>
+                <div><span class="swatch" style="background:#eef3f8"></span>#EEF3F8 (Line/Background)</div>
+            </div>
+            <ul>
+                <li>바로가기 8개(2×4) 아이콘형 타일 — 서비스/민원으로 즉시 이동</li>
+                <li>KPI 4종(오늘의 평균 pH/잔류염소/탁도/생산량) — 즉시 인지 가능</li>
+                <li>상수도 소식 배너 캐러셀 — 주요 홍보물/공지 집중 노출</li>
+                <li>공지/수의/입찰/채용 탭 — 최신 글을 한 영역에서 확인</li>
+            </ul>
+            <div class="meta">
+                <span class="chip">첫 방문자/고객 중심</span>
+                <span class="chip">서비스 바로가기 최적화</span>
+                <span class="chip">브랜드 블루 톤</span>
+            </div>
+        </section>
+
+        <!-- 시안 2 : 대시보드형(운영/현황 중심) -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 2 · 대시보드형(운영/현황 중심)</span>
+                <a class="link" href="https://sangsudo-ver2.netlify.app/" target="_blank" rel="noopener">시안 2 바로보기 →</a>
+            </div>
+            <p class="desc">
+                좌측 고정 사이드바와 카드 기반의 <b>대시보드형 레이아웃</b>입니다.
+                실시간 알림띠(긴급/점검), 오늘의 상수도 현황, 정수장 실시간 지표, 상수도 소식 배너, 4분할 공지(공지/수의/입찰/채용)를
+                **한 화면에서 모니터링**할 수 있도록 구성했습니다.
+            </p>
+            <div class="row">
+                <div><span class="swatch" style="background:#0f172a"></span>#0f172a (Sidebar)</div>
+                <div><span class="swatch" style="background:#ef4444"></span>#dc2626 (Main)</div>
+                <div><span class="swatch" style="background:#ef4444"></span>#ef4444 (Sub)</div>
+                <div><span class="swatch" style="background:#0f172a"></span>#ef4444 (Text)</div>
+                <div><span class="swatch" style="background:#f6fbff"></span>#F6F9FF (Background)</div>
+            </div>
+            <ul>
+                <li>좌측 고정 네비게이션 — 섹션별 빠른 전환</li>
+                <li>알림 띠배너 — 권역/시간/상황 중심의 실시간 공지 롤링</li>
+                <li>오늘의 상수도 현황(표현) + 실시간 그래프 — 운영 관점 한눈에</li>
+                <li>공지를 4분할 카드(공지/수의/입찰/채용)로 가독성 향상</li>
+            </ul>
+            <div class="meta">
+                <span class="chip">운영/현황 모니터링</span>
+                <span class="chip">카드형 정보 밀도</span>
+                <span class="chip">대시보드 UX</span>
+            </div>
+        </section>
+
+        <!-- 시안 3 : 포털형(서비스·홍보 허브) -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 3 · 포털형(서비스·홍보 허브)</span>
+                <a class="link" href="https://sangsudo-ver3.netlify.app/" target="_blank" rel="noopener">시안 3 바로보기 →</a>
+            </div>
+
+            <p class="desc">
+                시안 3은 <b>포털형(서비스·홍보 허브)</b> 구성을 채택해, 상단의 메인 비주얼/배너와
+                <b>자주 찾는 서비스</b> 카드, <b>상수도 소식</b> 및 <b>알림/공고</b> 등 핵심 모듈을
+                <u>한 화면에서 빠르게 탐색</u>할 수 있도록 설계했습니다.
+                운영자 관점의 대시보드가 아니라, <b>시민 이용자 중심의 랜딩 허브</b>에 초점을 맞춘 레이아웃입니다.
+            </p>
+
+            <!-- 색상 팔레트(사이트 톤앤매너 기준) -->
+            <div class="row">
+                <div><span class="swatch" style="background:#2563EB"></span>#2563EB (Primary)</div>
+                <div><span class="swatch" style="background:#0F172A"></span>#0F172A (Text)</div>
+                <div><span class="swatch" style="background:#F6F9FF"></span>#F6F9FF (Background)</div>
+                <div><span class="swatch" style="background:#0b2339"></span>#0b2339 (Footer)</div>
+            </div>
+
+            <ul>
+                <li><b>메인 비주얼/배너 캐러셀</b> — 정책·캠페인·중요 공지의 <u>시선집중</u>과 경로 유도</li>
+                <li><b>자주 찾는 서비스</b> — 카드형 바로가기로 민원 흐름을 <u>최소 클릭</u>으로 연결</li>
+                <li><b>상수도 소식</b> — 공지·홍보 콘텐츠를 <u>모듈화</u>해 빠른 업데이트/순환 노출</li>
+                <li><b>알림/공고 카드 4분할</b>(공지/수의계약/입찰/채용) — 각 카테고리를 개별 박스로 구분해 가독성 강화</li>
+                <li><b>접근성·반응형</b> — 키보드 포커스/명도 대비/모바일 재배치 고려</li>
+            </ul>
+
+            <div class="meta">
+                <span class="chip">시민 UX 중심</span>
+                <span class="chip">포털형 허브</span>
+                <span class="chip">배너·카드 강조</span>
+                <span class="chip">빠른 경로 유도</span>
+            </div>
+
+            <p class="note">
+                권장 사용: <b>대민 포털</b> 성격의 메인 페이지(민원/서비스 접근이 핵심인 경우).<br/>
+                필요 시 시안 2(현황형)의 일부 모듈(오늘의 수질, 실시간 그래프 등)을 <b>하위 섹션으로 혼합</b>할 수 있습니다.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+    ※ 두 시안은 동일한 콘텐츠를 다른 **문맥/사용자 목표**에 맞춰 재배치했습니다.
+    </footer>
+
+</body>
+</html>
