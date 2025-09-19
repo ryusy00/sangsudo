@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>상수도 사업본부 개편 시안</title>
+    <style>
+        :root{
+            --ink:#0f172a; --muted:#6b7a90; --line:#e7eef6; --chip:#eef4ff;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0; padding:32px 24px; color:var(--ink);
+            font:16px/1.62 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Apple SD Gothic Neo,Malgun Gothic,Arial;
+            background:#fff;
+        }
+        .top {margin:0 0 15px; display: flex; align-items:baseline;}
+        h1{font-size:1.8rem; margin: 0;}
+        .old {
+            margin-left: 15px; border-radius: 0.5rem; border: 1px solid var(--muted); font-weight: 600;
+            color: var(--muted);;font-size: 0.9rem; text-decoration: none; padding: 2px 10px; transition: all 0.2s ease-in-out;
+        }
+        .old:hover {background-color: var(--muted); color: #fff;}
+        .grid{display:grid; gap:24px; grid-template-columns:1fr; max-width:980px}
+        .card{
+            border:1px solid var(--line); border-radius:16px; padding:20px 20px 16px;
+            box-shadow:0 6px 18px rgba(16,56,116,.06);
+        }
+        .head{display:flex; gap:12px; align-items:center; margin-bottom:10px}
+        .head b{font-size:18px}
+        .pill{
+            display:inline-flex; align-items:center; gap:10px;
+            padding:8px 12px; border-radius:12px; font-weight:700;
+            background:var(--chip);
+        }
+        .link{
+            display:inline-flex; align-items:center; gap:8px; transition: all 0.2s ease-in-out;
+            padding:10px 14px; border:1px solid var(--line); border-radius:12px;
+            text-decoration:none; color:#1468ff; font-weight:800; white-space:nowrap;
+        }
+        .link:hover {
+            background-color: #1468ff; color: #fff;
+        }
+        .desc{margin:8px 0 14px; color:var(--muted)}
+        ul{margin:0; padding-left:18px}
+        li+li{margin-top:4px}
+        .row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+        .swatch{
+            width:14px; height:14px; border-radius:50%; display:inline-block; margin-right:6px;
+            border:1px solid rgba(0,0,0,.06)
+        }
+        .note{margin-top:6px; color:var(--muted); font-size:14px}
+        .meta{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
+        .meta .chip{background:#f6f9ff; border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:13px}
+        footer{max-width:980px; margin-top:24px; color:var(--muted); font-size:14px}
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <h1>상수도 사업본부 개편 시안</h1>
+        <a href="https://water.gwangju.go.kr/mainPortal.do" class="old" target="_blank" rel="noopener">기존 홈페이지 →</a>
+    </div>
+    
+    <div class="grid">
+
+        <!-- 시안 1 : 포털형 -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 1 · 포털형</span>
+                <!-- <a class="link" href="https://sangsudo-ver1-before.netlify.app/" target="_blank" rel="noopener">시안1 바로보기(1차 피드백 반영 전) →</a> -->
+                <a class="link" href="https://sangsudo-ver1-after.netlify.app/" target="_blank" rel="noopener">시안 1 바로보기 →</a>
+            </div>
+            <p class="desc">
+                시민이 자주 이용하는 기능을 중심으로 설계한 **포털형 메인**입니다.
+                KPI(수질 지표) + 자주찾는 서비스(8개) + 홍보/배너 캐러셀 + 공지 탭을 한 화면에서 확인할 수 있습니다.
+            </p>
+            <div class="row">
+                <div><span class="swatch" style="background:#0e3383"></span>#1468FF (Main)</div>
+                <div><span class="swatch" style="background:#1D4ED8"></span>#51B9FF (Sub)</div>
+                <div><span class="swatch" style="background:#D9E5FF"></span>#A9E6FF (Button)</div>
+                <div><span class="swatch" style="background:#0f172a"></span>#0F172A (Text)</div>
+                <div><span class="swatch" style="background:#eef3f8"></span>#EEF3F8 (Line/Background)</div>
+            </div>
+            <ul>
+                <li>바로가기 8개(2×4) 아이콘형 타일 — 서비스/민원으로 즉시 이동</li>
+                <li>KPI 4종(오늘의 평균 pH/잔류염소/탁도/생산량) — 즉시 인지 가능</li>
+                <li>상수도 소식 배너 캐러셀 — 주요 홍보물/공지 집중 노출</li>
+                <li>공지/수의계약/입찰/채용 탭 — 최신 글을 한 영역에서 확인</li>
+            </ul>
+            <div class="meta">
+                <span class="chip">첫 방문자/고객 중심</span>
+                <span class="chip">서비스 바로가기 최적화</span>
+                <span class="chip">브랜드 블루 톤</span>
+            </div>
+            <ul style="margin-top: 1rem; list-style: none;">
+                <h3 style="margin: 10px; padding: 0;">
+                    ※ 1차 피드백
+                    <a href="https://sangsudo-ver1-before.netlify.app/" target="_blank" rel="noopener"
+                    style="font-size: 0.9rem; padding-left: 10px;">피드백 반영전 시안 1 →</a>
+                </h2>
+                1.1 실시간 알림띠에 전화번호가 해당 위치에 '대표전화번호'문구가 없이 배치한 부분 <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 디자인 상 공간 절약을 위해 단순 숫자만 배치했습니다. <br>
+                ✅"대표전화" 문구 추가 진행 <br>
+
+                1.2 바로가기 8개(2×4) 아이콘형 타일이라고 표현되어 있는데 한줄로 표현되어 있는 부분 <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 기획 의도는 타일(2×4) 배열이었으나 반응형 테스트 과정에서 한 줄 배치된 것 같습니다. <br>
+                ✅ 일렬배치에서 2행 4열 형태로 변경  <br>
+
+                1.3 공지/수의계약/입찰/채용 <--탭 문구수정 ✅ <br>
+
+                1.4 대메뉴가 왼쪽정렬되어 있는 사유가 궁금함. <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 메뉴 가독성과 로고/검색 영역과의 균형을 위해 좌측 정렬했습니다.  <br>
+                ✅ 중앙 정렬· 우측 정렬 모두 가능하므로 피드백에 맞춰 조정 가능합니다. <br>
+
+                1.5 서비스중심의 시안인데 어느 부분을 강조해서 보여주는건지 궁금함. <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 자주 찾는 서비스(바로가기 아이콘)와 공지 영역을 가장 먼저 배치해 접근성을 강조했습니다. <br>
+                특정 서비스 강조를 원하시면 비주얼(아이콘, 배경 등) 색상 대비로 보완 가능합니다.
+            </ul>
+        </section>
+
+        <!-- 시안 2 : 대시보드형(운영/현황 중심) -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 2 · 대시보드형</span>
+                <a class="link" href="https://sangsudo-ver2-after.netlify.app/" target="_blank" rel="noopener">시안 2 바로보기 →</a>
+            </div>
+            <p class="desc">
+                좌측 고정 사이드바와 카드 기반의 <b>대시보드형 레이아웃</b>입니다.
+                실시간 알림띠(긴급/점검), 오늘의 상수도 현황, 정수장 실시간 지표, 상수도 소식 배너, 4분할 공지(공지/수의계약/입찰/채용)를
+                **한 화면에서 모니터링**할 수 있도록 구성했습니다.
+            </p>
+            <div class="row">
+                <div><span class="swatch" style="background:#0f172a"></span>#0f172a (Sidebar)</div>
+                <div><span class="swatch" style="background:#ef4444"></span>#dc2626 (Main)</div>
+                <div><span class="swatch" style="background:#ef4444"></span>#ef4444 (Sub)</div>
+                <div><span class="swatch" style="background:#0f172a"></span>#ef4444 (Text)</div>
+                <div><span class="swatch" style="background:#f6fbff"></span>#F6F9FF (Background)</div>
+            </div>
+            <ul>
+                <li>좌측 고정 네비게이션 — 섹션별 빠른 전환</li>
+                <li>알림 띠배너 — 권역/시간/상황 중심의 실시간 공지 롤링</li>
+                <li>오늘의 상수도 현황(표현) + 실시간 그래프 — 운영 관점 한눈에</li>
+                <li>공지를 4분할 카드(공지/수의계약/입찰/채용)로 가독성 향상</li>
+            </ul>
+            <div class="meta">
+                <span class="chip">운영/현황 모니터링</span>
+                <span class="chip">카드형 정보 밀도</span>
+                <span class="chip">대시보드 UX</span>
+            </div>
+            <ul style="margin-top: 1rem; list-style: none;">
+                <h3 style="margin: 10px; padding: 0;">
+                    ※ 1차 피드백
+                    <a href="https://sangsudo-ver2-before.netlify.app/" target="_blank" rel="noopener"
+                    style="font-size: 0.9rem; padding-left: 10px;">피드백 반영전 시안 2 →</a>
+                </h2>
+                2.1 주의,알람영역에 전화번호가 해당 위치에 '대표전화번호'문구가 없이 배치한 부분 <br>
+                ✅"대표전화" 문구 추가 진행 <br>
+
+                2.2 정수장 실시간 수질 영역에 이미지가 무엇을 의미하는지.. <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 실제 데이터를 의미하는 시각화가 아닌 해당 영역이 허전해 보이지 않도록 <br>
+                "정수장 실시간 수질"이라는 문구에 어울리는 보조 이미지(시각적 장식 요소)로 임시 배치한 것입니다. <br>
+
+                2.3 '정수장의 수질정보'와 '오늘의상수도현황' 동일한 데이터 표현인건지 ? <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> :  동일 데이터를 서로 다른 방식으로 표현한 영역입니다. <br>
+                목적상 대안 표현이므로, 필요 시 둘 중 하나만 노출해도 무방합니다. <br>
+
+                2.4 좌측메뉴에서 3depth의 메뉴는 아예 표기를 안하는건지 ?? <br>
+                > 사용자 입장에서는 클릭하고 또 다시 들어가야하는 불편함이 있을듯 <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> : 초기 시안에는 단순히 2Depth까지만 노출했습니다. <br>
+                ✅ 필요 시, 3Depth도 바로 표현할 수 있게 개선 가능합니다. <br>
+
+                2.5 하단의 입찰공고 탭 눌러보면 링크 이동인데 게시글을 어떻게 표현한다는 건지? <br>
+                <span style="font-weight: 600;">** 디자인 의도</span> :  시안 단계에서는 입찰공고 게시글의 상세 표현 방식까지는 포함하지 않았습니다. (사용자 편의성을 위해 요약 카드형, 제목+날짜 리스트형 등으로 표현) <br>
+                ✅ 기존의 클릭 시 바로 각 입찰 게시판 상세로 이동하는 구조로 변경 가능 <br>
+
+
+
+            </ul>
+        </section>
+
+        <!-- 시안 3 : 포털형 -->
+        <section class="card">
+            <div class="head">
+                <span class="pill">시안 3 · 포털형</span>
+                <a class="link" href="https://sangsudo-ver3-after.netlify.app/" target="_blank" rel="noopener">시안 3 바로보기 →</a>
+            </div>
+            <p class="desc">
+                시안 3은 <b>포털형(서비스·홍보 허브)</b> 구성을 채택해, 상단의 메인 비주얼/배너와
+                <b>자주 찾는 서비스</b> 카드, <b>상수도 소식</b> 및 <b>알림/공고</b> 등 핵심 모듈을
+                <u>스크롤로 한 페이지에서 연속 탐색</u>할 수 있도록 설계했습니다.
+            </p>
+            <!-- 색상 팔레트(사이트 톤앤매너 기준) -->
+            <div class="row">
+                <div><span class="swatch" style="background:#2563EB"></span>#2563EB (Primary)</div>
+                <div><span class="swatch" style="background:#0F172A"></span>#0F172A (Text)</div>
+                <div><span class="swatch" style="background:#F6F9FF"></span>#F6F9FF (Background)</div>
+                <div><span class="swatch" style="background:#0b2339"></span>#0b2339 (Footer)</div>
+            </div>
+            <ul>
+                <li><b>메인 비주얼/배너 캐러셀</b> — 정책·캠페인·중요 공지의 <u>시선집중</u>과 경로 유도</li>
+                <li><b>자주 찾는 서비스</b> — 카드형 바로가기로 민원 흐름을 <u>최소 클릭</u>으로 연결</li>
+                <li><b>상수도 소식</b> — 공지·홍보 콘텐츠를 <u>모듈화</u>해 빠른 업데이트/순환 노출</li>
+                <li><b>알림/공고 카드 4분할</b>(공지/수의계약/입찰/채용) — 각 카테고리를 개별 박스로 구분해 가독성 강화</li>
+                <li><b>접근성·반응형</b> — 키보드 포커스/명도 대비/모바일 재배치 고려</li>
+            </ul>
+            <div class="meta">
+                <span class="chip">시민 UX 중심</span>
+                <span class="chip">포털형 허브</span>
+                <span class="chip">배너·카드 강조</span>
+                <span class="chip">빠른 경로 유도</span>
+            </div>
+            <ul style="margin-top: 1rem; list-style: none;">
+                <h3 style="margin: 10px; padding: 0;">
+                    ※ 1차 피드백
+                    <a href="https://sangsudo-ver3-before.netlify.app/" target="_blank" rel="noopener"
+                    style="font-size: 0.9rem; padding-left: 10px;">피드백 반영전 시안 3 →</a>
+                </h2>
+                3.1 '한 화면에서 빠르게 탐색' 이라고 써져있는데 알람과소식 공고 부터 내용 짤림. <br>
+                <span style="font-weight: 600;">--- 디자인 의도</span> : '한 화면에서 빠르게 탐색'은 스크롤 전 영역만을 뜻한 것이 아니라 <br>
+                한 페이지 내에서 스크롤로 연속 탐색하는 구조를 의미한 표현이었습니다.  <br>
+                ✅ 특징 문구를 수정하거나 스크롤 전 영역의 한 화면에 보여지도록 보완하겠습니다.  <br>
+
+                3.2 8개의 자주찾는서비스가 3줄로 표현되어 정형화된 느낌이 안듬. <br>
+                <span style="font-weight: 600;">--- 디자인 의도</span> : '자주찾는서비스' 우측의 시민참여 홍보를 위해 '상수도 소식' 영역과 동시 배치 <br>
+                ✅ PC 화면에서는 2행 4열 고정 타일 구조로 배치하여 균형감을 주고, <br>
+                태블릿·모바일에서는 2열 배치 전환으로 일관된 형태를 유지하도록 수정하겠습니다. <br>
+
+                3.3 '오늘의상수도현황' 정수장의 데이터 생략하지 말고 표현바람.✅ <br>
+
+                3.4 동복댐에만 표현되어 있는 '댐현황더보기' 기능이 궁금하고, 위치가 애매하고, <br>
+                '링크이동'이나 '버튼'이라면 다르게 표현해줬으면 함. <br>
+                ✅ '댐현황더보기'는 원안에 없던 임시 요소로 지적 주신대로 삭제하겠습니다. <br>
+
+                3.5 대메뉴가 왼쪽정렬되어 있는 사유가 궁금함. <br>
+                <span style="font-weight: 600;">--- 디자인 의도</span> : 시안 1과 동일하게 메뉴 가독성과 로고/검색 영역과의 균형을 위해 좌측 정렬했습니다.  <br>
+                ✅ 중앙 정렬· 우측 정렬 모두 가능하므로 피드백에 맞춰 조정 가능합니다. <br>
+
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+    ※ 두 시안은 동일한 콘텐츠를 다른 **문맥/사용자 목표**에 맞춰 재배치했습니다.
+    </footer>
+
+</body>
+</html>
